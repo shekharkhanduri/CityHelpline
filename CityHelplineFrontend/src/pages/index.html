@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City Helpline</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">City Helpline</div>
+
+<div class="navLinks">
+<a href="login.html">Login</a>
+<a href="register.html">Sign Up</a>
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="heroContent">
+
+<h1>Report City Issues</h1>
+
+<p>
+Help improve your city by reporting problems like
+roads, garbage, lighting and public safety.
+</p>
+
+<button class="btn primary" onclick="goLogin()">Login</button>
+<button class="btn secondary" onclick="goRegister()">Create Account</button>
+
+</div>
+
+</section>
+<div id="foot"></div>
+
+
+<script>
+
+function goLogin(){
+  window.location.href="login.html";
+}
+
+function goRegister(){
+  window.location.href="signup.html";
+}
+
+</script>
+
+</body>
+</html>
+

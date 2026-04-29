@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — MuniCMS Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-brand">🏙️ City Helpline</span>
+  <a href="admin-dashboard.html" class="nav-link active">Dashboard</a>
+  <a href="complaints.html" class="nav-link">Complaints</a>
+  <a href="departments.html" class="nav-link">Departments</a>
+  <div class="nav-spacer"></div>
+  <span class="nav-user" id="nav-user"></span>
+  <button id="logout-btn" class="btn btn-sm btn-secondary">Logout</button>
+</nav>
+
+<div class="page">
+  <div class="page-header">
+    <div>
+      <div class="page-title">Dashboard</div>
+      <div class="page-subtitle">Overview of all municipal complaints</div>
+    </div>
+    <a href="complaints.html" class="btn btn-primary">View All Complaints</a>
+  </div>
+
+  <div id="dashboard-content">
+    <div class="loading"><div class="spinner"></div>Loading dashboard...</div>
+  </div>
+</div>
+
+<script type="module" src="../js/adminDashboard.js"></script>
+
+</body>
+</html>

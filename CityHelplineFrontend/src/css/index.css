@@ -1,0 +1,112 @@
+
+
+
+/* variables */
+:root{
+  --primary-color:#007BFF;
+  --primary-dark:#0056b3;
+  --text-main:#000;
+}
+
+/* reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  height:100vh;
+}
+
+/* navbar */
+
+.navbar{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:20px 60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:2;
+}
+
+.logo{
+  font-family:"DM Serif Display",serif;
+  font-size:32px;
+  color:white;
+}
+
+.navLinks a{
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:500;
+  color:white;
+}
+
+/* hero */
+
+.hero{
+  height:100vh;
+
+  background-image:linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+  ), url("../assets/cityart.svg");
+
+  background-size: cover;
+  background-position:left;
+
+  display:flex;
+  align-items:center;
+}
+
+.heroContent{
+  margin-left:80px;
+  max-width:500px;
+  color:white;
+}
+
+.heroContent h1{
+  font-size:54px;
+  margin-bottom:15px;
+}
+
+.heroContent p{
+  font-size:18px;
+  margin-bottom:30px;
+  opacity:0.9;
+}
+
+/* buttons */
+
+.btn{
+  padding:12px 24px;
+  border-radius:6px;
+  border:none;
+  font-size:15px;
+  font-weight:500;
+  cursor:pointer;
+  margin-right:12px;
+}
+
+.primary{
+  background:var(--primary-color);
+  color:white;
+}
+
+.primary:hover{
+  background:var(--primary-dark);
+}
+
+.secondary{
+  background:white;
+  color:black;
+}
+
+

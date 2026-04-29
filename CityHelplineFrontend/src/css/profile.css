@@ -1,0 +1,153 @@
+
+    /* ── Profile-specific styles ── */
+    .profile-layout {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* ── User card ── */
+    .user-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-size: 30px;
+      font-weight: 700;
+      flex-shrink: 0;
+      border: 3px solid var(--blue);
+    }
+
+    .user-info h2 {
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .user-info p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .user-stats {
+      margin-left: auto;
+      display: flex;
+      gap: 24px;
+      text-align: center;
+    }
+    .user-stat-item strong {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+    .user-stat-item span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ── My Complaints section ── */
+    .section-title {
+      font-family: var(--font-head);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .my-complaints-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .my-complaint-row {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .my-complaint-row:hover {
+      box-shadow: 0 4px 16px rgba(59,124,253,0.1);
+      transform: translateY(-1px);
+    }
+
+    .row-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--blue-light);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .row-icon svg { width: 18px; height: 18px; }
+
+    .row-info { flex: 1; min-width: 0; }
+    .row-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .row-meta {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      gap: 12px;
+    }
+
+    .row-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .empty-profile {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      font-size: 14px;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+    }
+    .empty-profile a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+ 

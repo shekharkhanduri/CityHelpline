@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CityFix — Dashboard</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Lucide icons (lightweight icon set) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="../css/dashboard.css"/>
+</head>
+<body>
+
+  <!-- ── TOP NAV ─────────────────────────────────────────── -->
+  <header class="navbar">
+    <div class="nav-left">
+      <span class="logo">🏙️ City Helpline</span>
+    </div>
+    <nav class="nav-links">
+      <a href="dashboard.html" class="nav-link active">Dashboard</a>
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="complaint.html" class="nav-link nav-link-cta">+ File Complaint</a>
+    </nav>
+    <div class="nav-right">
+      <span class="nav-username" id="nav-username">Hey, User 👋</span>
+      <button class="btn-logout" id="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <!-- ── MAIN LAYOUT ─────────────────────────────────────── -->
+  <main class="main-layout">
+
+    <!-- ── STAT CARDS ──────────────────────────────────────── -->
+    <section class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon" style="background:#e8f0fe;color:#3b7cfd">
+          <i data-lucide="clipboard-list"></i>
+        </div>
+        <div class="stat-info">
+          <p class="stat-label">Total Complaints</p>
+          <h2 class="stat-value" id="stat-total">—</h2>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:#fff4e5;color:#f59e0b">
+          <i data-lucide="clock"></i>
+        </div>
+        <div class="stat-info">
+          <p class="stat-label">Pending</p>
+          <h2 class="stat-value" id="stat-pending">—</h2>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:#e9f5ff;color:#3b82f6">
+          <i data-lucide="loader"></i>
+        </div>
+        <div class="stat-info">
+          <p class="stat-label">In Progress</p>
+          <h2 class="stat-value" id="stat-inprogress">—</h2>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:#edfaf4;color:#22c55e">
+          <i data-lucide="check-circle"></i>
+        </div>
+        <div class="stat-info">
+          <p class="stat-label">Resolved</p>
+          <h2 class="stat-value" id="stat-resolved">—</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TWO COLUMNS ─────────────────────────────────────── -->
+    <section class="content-row">
+
+      <!-- LEFT: Complaints List -->
+      <div class="panel complaints-panel">
+        <div class="panel-header">
+          <h3 class="panel-title">Nearby Complaints</h3>
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="inProgress">In Progress</button>
+            <button class="filter-btn" data-filter="resolved">Resolved</button>
+          </div>
+        </div>
+
+        <div class="complaints-list" id="complaints-list">
+          <!-- Filled by JS -->
+          <div class="loading-msg">Loading complaints…</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Map -->
+      <div class="panel map-panel">
+        <div class="panel-header">
+          <h3 class="panel-title">Map View</h3>
+          <span class="map-hint">Click a complaint to focus</span>
+        </div>
+        <div id="map"></div>
+      </div>
+
+    </section>
+  </main>
+  <script src="../js/map.js"></script>
+  
+  <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+
+/*css custom properties*/
+:root {
+  --primary-color: #007BFF;
+  --primary-dark: #0056b3;
+
+  --background-color: #ffffff;
+  --card-background: #ffffff;
+
+  --text-main: #000000;
+  --text-light: #0b3bab;
+
+
+  --border-color: #e5e7eb;
+
+  --error-color: #ef4444;
+}
+
+/* removes browsers default spacing and makes calculation predictable */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.authPage{
+  display: flex;
+  min-height: 100vh;
+}
+
+
+
+
+.authLeft {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* testing
+  modification */
+  background: #f7f9fc;
+
+  padding: 60px;
+}
+
+.authRight{
+  flex: 1;
+  background-color: var(--primary-color);
+
+  /* testing
+  modification */
+  border-left: 1px solid #e6e8ee;
+}
+
+
+.authRight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  /* testing */
+  object-position: left center;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.cardHeader h1 {
+  font-size: 42px;
+
+  /* testing
+  modification */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo {
+  font-family: "DM Serif Display", serif;
+
+  /* testing
+  modification */
+  font-size: 36px;
+  margin-bottom: 10px;
+
+  color: #111;
+}
+
+.cardHeader h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.field input {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;   /* modification */
+}
+
+.input-with-action {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-action input {
+  width: 100%;
+  padding-right: 88px; /* space for action button */
+}
+
+.input-action-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid var(--border-color);
+  background: #fff;
+  color: var(--text-light);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.input-action-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.input-action-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+  border-color: var(--primary-color);
+}
+
+/* testing
+modification */
+.field input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+}
+
+
+.field label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.hint {
+  font-size: 12px;
+  margin-top: 4px;
+  color: var(--text-light);
+}
+
+.primaryBtn {
+  width: 100%;
+  padding: 14px;
+
+  /* testing
+  modification */
+  margin-top: 16px;
+
+  background-color: var(--primary-color);
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.primaryBtn:hover {
+  background-color: var(--primary-dark);
+
+  /* testing
+  modification */
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.card-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.card-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+form {
+  margin-top: 10px;
+}

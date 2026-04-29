@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaints — MuniCMS Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-brand">🏙️ City Helpline</span>
+  <a href="admin-dashboard.html" class="nav-link">Dashboard</a>
+  <a href="complaints.html" class="nav-link active">Complaints</a>
+  <a href="departments.html" class="nav-link">Departments</a>
+  <div class="nav-spacer"></div>
+  <span class="nav-user" id="nav-user"></span>
+   <button id="logout-btn" class="btn btn-sm btn-secondary">Logout</button>
+</nav>
+
+<div class="page">
+  <div class="page-header">
+    <div>
+      <div class="page-title">Complaints</div>
+      <div class="page-subtitle">Manage and triage all submitted complaints</div>
+    </div>
+  </div>
+
+  <div class="filters">
+    <select class="filter-select" id="filter-status">
+      <option value="">All Statuses</option>
+      <option value="pending">Pending</option>
+      <option value="underReview">Under Review</option>
+      <option value="inProgress">In Progress</option>
+      <option value="resolved">Resolved</option>
+    </select>
+    <select class="filter-select" id="filter-department">
+      <option value="">All Departments</option>
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Category</th>
+          <th>Location</th>
+          <th>Status</th>
+          <th>Priority</th>
+          <th>Department</th>
+          <th>Created</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="complaints-tbody">
+        <tr><td colspan="8"><div class="loading"><div class="spinner"></div>Loading...</div></td></tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <span class="pagination-info" id="pagination-info"></span>
+      <button class="btn btn-sm btn-secondary" id="btn-prev" disabled>← Prev</button>
+      <button class="btn btn-sm btn-secondary" id="btn-next" disabled>Next →</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script type="module" src="../js/complaints.js"></script>
+
+
+</body>
+</html>

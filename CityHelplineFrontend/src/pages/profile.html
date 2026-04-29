@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CityFix — Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="../css/dashboard.css"/>
+  <link rel="stylesheet" href="../css/profile.css"/>
+</head>
+<body>
+
+  <!-- ── NAVBAR (same as dashboard) ── -->
+  <header class="navbar">
+    <div class="nav-left">
+      <span class="logo">🏙️ City Helpline</span>
+    </div>
+    <nav class="nav-links">
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+      <a href="profile.html" class="nav-link active">Profile</a>
+      <a href="complaint.html" class="nav-link nav-link-cta">+ File Complaint</a>
+    </nav>
+    <div class="nav-right">
+      <span class="nav-username" id="nav-username">Hey, User 👋</span>
+      <button class="btn-logout" id="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="profile-layout">
+
+    <!-- ── USER CARD ── -->
+    <div class="user-card">
+      <div class="avatar" id="avatar-initials">?</div>
+      <div class="user-info">
+        <h2 id="profile-name">Loading…</h2>
+        <p id="profile-email">—</p>
+        <p style="font-size:12px; color:var(--muted); margin-top:6px;">Member since this session</p>
+      </div>
+      <div class="user-stats">
+        <div class="user-stat-item">
+          <strong id="ps-total">0</strong>
+          <span>Total</span>
+        </div>
+        <div class="user-stat-item">
+          <strong id="ps-pending" style="color:var(--pending)">0</strong>
+          <span>Pending</span>
+        </div>
+        <div class="user-stat-item">
+          <strong id="ps-inprogress" style="color:var(--inprogress)">0</strong>
+          <span>In Progress</span>
+        </div>
+        <div class="user-stat-item">
+          <strong id="ps-resolved" style="color:var(--resolved)">0</strong>
+          <span>Resolved</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MY COMPLAINTS ── -->
+    <div>
+      <h3 class="section-title">My Complaints</h3>
+      <div class="my-complaints-grid" id="my-complaints-list">
+        <div class="loading-msg">Loading your complaints…</div>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="module" src="../js/profile.js"></script>
+</body>
+</html>
