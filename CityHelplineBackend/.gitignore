@@ -1,0 +1,9 @@
+node_modules/
+.env
+image-verification-backend-package/.venv/
+image-verification-backend-package/__pycache__/
+image-verification-backend-package/**/__pycache__/
+image-verification-backend-package/**/*.pyc
+Testing.md
+context.md
+sql/
